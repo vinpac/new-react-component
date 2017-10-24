@@ -1,0 +1,10 @@
+node_modules/
+test/
+lib/
+
+.gitignore
+.travis.yml
+.eslintrc
+.babelrc
+.editorconfig
+.prettierrc.json

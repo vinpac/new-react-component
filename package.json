@@ -1,0 +1,56 @@
+{
+  "name": "new-react-component",
+  "version": "0.0.1",
+  "author": "Vinicius Pacheco Furtado <vin175pacheco@gmail.com>",
+  "description": "A react component generator with cli",
+  "files": [
+    "build",
+    "index.js",
+    "createComponent.js"
+  ],
+  "main": "build/cli.js",
+  "keywords": [
+    "cli",
+    "react",
+    "postcss-plugin",
+    "create",
+    "generator",
+    "component"
+  ],
+  "engines": {
+    "node": ">=0.12.0 || >=4.3.0 <5.0.0 || >=5.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:vinpac/new-react-component.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "run-cli": "babel-node lib/cli",
+    "pretest": "$(npm bin)/eslint lib test --fix",
+    "lint": "$(npm bin)/eslint lib test --fix",
+    "test": "$(npm bin)/jest",
+    "transpile": "$(npm bin)/babel lib -d build",
+    "prepublish": "npm run transpile",
+    "postpublish": "rm -rf build && git push origin master --follow-tags"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-jest": "^21.2.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "jest": "^21.2.1",
+    "prettier": "^1.7.4"
+  },
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "commander": "^2.11.0",
+    "fs-extra": "^4.0.2"
+  },
+  "require": "babel-core/register"
+}

@@ -1,0 +1,28 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb-base",
+  "env": {
+    "node": true
+  },
+
+  "rules": {
+    "semi": [
+      2,
+      "never"
+    ],
+
+    "max-len": [2, 100, 4],
+    "quotes": [2, "single"],
+
+    // Not supporting nested package.json yet
+    // https://github.com/benmosher/eslint-plugin-import/issues/458
+    "import/no-extraneous-dependencies": "off",
+
+    // Recommend not to leave any console.log in your code
+    // Use console.error, console.warn and console.info instead
+    "no-console": 0,
+    "function-paren-newline": 0,
+
+    "no-param-reassign": ["error", { "props": false }]
+  }
+}
